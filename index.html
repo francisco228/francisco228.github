@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="stlye.css">
+</head>
+<body>
+    <div class="night-sky">
+        <div class="moon"></div>
+        
+        <!-- Estrellas pequeñas como puntos -->
+        <div class="small-stars">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Estrellas para "Feliz Cumpleaños" -->
+        <div class="stars">
+            <span>F</span>
+            <span>E</span>
+            <span>L</span>
+            <span>I</span>
+            <span>Z</span>
+            <span></span>
+            <span>C</span>
+            <span>U</span>
+            <span>M</span>
+            <span>P</span>
+            <span>L</span>
+            <span>E</span>
+            <span>A</span>
+            <span>Ñ</span>
+            <span>O</span>
+            <span>S</span>
+        </div>
+
+        <!-- Estrellas para "Lizbeth" -->
+        <div class="stars name-stars">
+            <span>L</span>
+            <span>I</span>
+            <span>Z</span>
+            <span>B</span>
+            <span>E</span>
+            <span>T</span>
+            <span>H</span>
+        </div>
+
+        <!-- Botón para reproducir música -->
+        <div class="music">
+            <button id="playButton">Púchame</button>
+            <audio id="audioPlayer" loop>
+                <source src="music/Conjunto Primavera - Hoy En Tu Día (Audio).mp3" type="audio/mp3">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <!-- Mensaje bonito y playa -->
+        <div class="beach">
+            <p class="message">¡Que tengas un día maravilloso!</p>
+        </div>
+    </div>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        playButton.addEventListener('click', function() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playButton.innerText = "Páusame";
+            } else {
+                audioPlayer.pause();
+                playButton.innerText = "Púchame";
+            }
+        });
+    </script>
+
+</body>
+</html>
